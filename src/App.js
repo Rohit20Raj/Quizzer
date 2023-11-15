@@ -7,12 +7,14 @@ import { QuizContext } from './helper/Context';
 function App() {
   const [gameState, setGameState] = useState("start");
   const [score, setScore] = useState(0);
+  const [quizName, setQuizName] = useState([]);
   return (
     <div className="App">
-      <QuizContext.Provider value={{score, setScore, setGameState}}>
-        {gameState === "start" && <Start/>}
-        {gameState === "quiz" && <Quiz/>}
-        {gameState === "end" && <End/>}
+      <h1 className="heading container"><img className='logo' src='./OIG.jpeg'/>UIZZER</h1>
+      <QuizContext.Provider value={{ score, setScore, setGameState, quizName, setQuizName }}>
+        {gameState === "start" && <Start />}
+        {gameState === "quiz" && <Quiz />}
+        {gameState === "end" && <End />}
       </QuizContext.Provider>
     </div>
   );

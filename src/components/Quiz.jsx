@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Questions } from '../quizQuesions'
+import { avengers, loki } from '../quizQuestions'
 import { QuizContext } from '../helper/Context';
 import Correct from './Correct';
 import Wrong from './Wrong';
@@ -8,9 +8,11 @@ function Quiz() {
   const [question, setQuestion] = useState(0);
   //eslint-disable-next-line no-unused-vars
   const [choosenAnswer, setChoosenAnswer] = useState("");
-  const { setGameState, score, setScore } = useContext(QuizContext);
+  const { quizName, setGameState, score, setScore } = useContext(QuizContext);
   const [flag, setFlag] = useState(false);
-
+  const quizzes = { avengers, loki };
+  const Questions = quizzes[quizName];
+  
   const handleAnswer = (answer) => {
     if (flag === false) {
       setChoosenAnswer(answer);

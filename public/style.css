@@ -3,6 +3,10 @@ body{
   margin: 0;
   padding: 0;
 }
+.logo{
+  height: 5rem;
+  margin-right: 0;
+}
 .heading{
   font-size: 3rem;
 }
@@ -16,7 +20,7 @@ body{
 .start{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   font-size: small;
 }
 .options{

@@ -1,4 +1,4 @@
-export const Questions = [
+export const avengers = [
   {
     prompt: "What is the strongest metal in the Marvel Universe?",
     img: "https://geeksgonnageek.com/wp-content/uploads/2022/10/FormatConvert_20221017_185233_3239.webp",
@@ -63,3 +63,51 @@ export const Questions = [
     Ans: "B"
   }
 ];
+export const loki = [
+  {
+    prompt: "Finish the name: Hunter ___ ",
+    img:"https://img.buzzfeed.com/store-an-image-prod-us-east-1/rgriKQ_ub.png?downsize=625%3A*&output-format=auto&output-quality=auto",
+    A: "B-15",
+    B: "B-13",
+    C: "C-15",
+    D: "B-14",
+    Ans: "A",
+  },
+  {
+    prompt: "What was Alligator Loki’s Nexus event?",
+    img:"https://img.buzzfeed.com/store-an-image-prod-us-east-1/p8JGh6AUK.png?downsize=625%3A*&output-format=auto&output-quality=auto",
+    A: "He ate the neighbor's hamster",
+    B: "He ate someone’s Crocs",
+    C: "He ate the wrong neighbor's cat",
+    D: "He ate a lizard",
+    Ans: "C",
+  },
+  {
+    prompt: "What’s the greeting/catchphrase everyone says to eachother at the TVA?",
+    img:"https://img.buzzfeed.com/store-an-image-prod-us-east-1/RxYmaYhvR.png?downsize=625%3A*&output-format=auto&output-quality=auto",
+    A: "Save time!",
+    B: "For all time always",
+    C: "For all time infinite",
+    D: "For all time forever",
+    Ans: "B",
+  },
+  {
+    prompt: "When did Loki go to the TVA?",
+    img:"https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/05/loki-tesseract-avengers-endgame.jpg",
+    A: "2010",
+    B: "2011",
+    C: "2012",
+    D: "1014",
+    Ans: "C",
+  },
+  {
+    prompt: "What’s the name of the guy Loki threatened to “gut like a fish”?",
+    img:"https://img.buzzfeed.com/store-an-image-prod-us-east-1/AmPa6s7qX.png?downsize=625%3A*&output-format=auto&output-quality=auto",
+    A: "Brian",
+    B: "Lacy",
+    C: "Troy",
+    D: "Casey",
+    Ans: "D",
+  }
+];
+

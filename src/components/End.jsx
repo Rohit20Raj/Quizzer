@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
-import { Questions } from '../quizQuesions';
+import { avengers, loki } from '../quizQuestions';
 import { QuizContext } from '../helper/Context';
 
 function End() {
-  const { score, setScore, setGameState } = useContext(QuizContext);
+  const { quizName, score, setScore, setGameState } = useContext(QuizContext);
   const restart = () => {
     setScore(0);
+    document.title = "Quizzer";
     setGameState("start");
   }
+  const quizzes = { avengers, loki };
+  const Questions = quizzes[quizName];
   return (
     <>
       <div className="card container end">
