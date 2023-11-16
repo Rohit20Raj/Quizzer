@@ -3,32 +3,64 @@ body{
   margin: 0;
   padding: 0;
 }
-.logo{
-  height: 5rem;
-  margin-right: 0;
-}
 .heading{
+  display: flex;
+  align-items: center;
+  z-index: 1;
   font-size: 3rem;
 }
+.logo{
+  height: 3.5rem;
+  margin-right: 0;
+}
 .start>.card{
-  width: 15rem;
+  margin: 0;
+  width: 10rem;
 }
 .card{
   width: 20rem;
-  box-shadow: 0 0 20px;
+  box-shadow: 0 0 25px;
 }
 .start{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: small;
+  display: grid;
+  justify-items: center;
+  font-size:0.5rem;
+}
+@media (min-width: 320px) {
+  .start{
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center ;
+    column-gap: 0.25rem;
+  }
+  .start>.card{
+    width: 10rem;
+  }
+  .poster{
+    height: 13rem;
+  }
+}
+@media (min-width: 768px) {
+  .start{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .start>.card{
+    width: 18rem;
+  }
+  .poster{
+    height: 22rem;
+  }
+
 }
 .options{
   display: flex;
   flex-direction: column;
 }
 .quiz{
-  margin-top: 10vh;
+  /* margin-top: 5vh; */
+  height: 100%;
 }
 .ques-img{
   width: 100%;

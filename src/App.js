@@ -3,6 +3,7 @@ import End from './components/End';
 import Quiz from './components/Quiz';
 import Start from './components/Start';
 import { QuizContext } from './helper/Context';
+import image from './components/images/OIG.jpeg';
 
 function App() {
   const [gameState, setGameState] = useState("start");
@@ -10,7 +11,10 @@ function App() {
   const [quizName, setQuizName] = useState([]);
   return (
     <div className="App">
-      <h1 className="heading container"><img className='logo' src='./OIG.jpeg'/>UIZZER</h1>
+      <h1 className="heading container">
+        <img className='logo' src={image} alt='Q' />
+        <span>UIZZER</span>
+      </h1>
       <QuizContext.Provider value={{ score, setScore, setGameState, quizName, setQuizName }}>
         {gameState === "start" && <Start />}
         {gameState === "quiz" && <Quiz />}

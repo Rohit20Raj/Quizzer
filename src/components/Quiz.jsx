@@ -34,13 +34,13 @@ function Quiz() {
 
   return (
     <>
-      <div className="card quiz container">
+      <div className="card quiz container mt-1">
         <div className="questionNo">{question+1} of {Questions.length}</div>
         <div className="card-body">
-          <img className='ques-img' src={Questions[question].img} alt="" />
-          <h2 className="card-title questions">
+          <img className='ques-img' src={Questions[question].img} alt="Question image" />
+          <h5 className="card-title questions">
             {Questions[question].prompt}
-          </h2>
+          </h5>
           <div className="options">
             <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("A")}>{Questions[question].A}</button>
             <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("B")}>{Questions[question].B}</button>
@@ -48,7 +48,7 @@ function Quiz() {
             <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("D")}>{Questions[question].D}</button>
           </div>
           {flag && (choosenAnswer === Questions[question].Ans ? <Correct /> : <Wrong ans={Questions[question][Questions[question].Ans]} />)}
-          <div className="bottom mt-5">
+          <div className="bottom mt-3">
             <div className='score'>Score: {score}</div>
             <button type='button' className='btn btn-success' onClick={nextQuestion}> {question===Questions.length-1 ? "Finish Quiz" : "Next Question→"} </button>
           </div>
