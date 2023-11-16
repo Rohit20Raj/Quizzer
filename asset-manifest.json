@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/Quizzer/static/css/main.e6c13ad2.css",
-    "main.js": "/Quizzer/static/js/main.f96a68aa.js",
-    "static/js/787.87b62f6f.chunk.js": "/Quizzer/static/js/787.87b62f6f.chunk.js",
+    "main.css": "/Quizzer/static/css/main.f1b5eac3.css",
+    "main.js": "/Quizzer/static/js/main.5f3e0312.js",
+    "static/media/OIG.jpeg": "/Quizzer/static/media/OIG.18ea9b3e9511dde2e08e.jpeg",
     "index.html": "/Quizzer/index.html",
-    "main.e6c13ad2.css.map": "/Quizzer/static/css/main.e6c13ad2.css.map",
-    "main.f96a68aa.js.map": "/Quizzer/static/js/main.f96a68aa.js.map",
-    "787.87b62f6f.chunk.js.map": "/Quizzer/static/js/787.87b62f6f.chunk.js.map"
+    "main.f1b5eac3.css.map": "/Quizzer/static/css/main.f1b5eac3.css.map",
+    "main.5f3e0312.js.map": "/Quizzer/static/js/main.5f3e0312.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.f96a68aa.js"
+    "static/css/main.f1b5eac3.css",
+    "static/js/main.5f3e0312.js"
   ]
 }
