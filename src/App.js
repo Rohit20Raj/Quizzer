@@ -3,19 +3,39 @@ import End from './components/End';
 import Quiz from './components/Quiz';
 import Start from './components/Start';
 import { QuizContext } from './helper/Context';
-import image from './components/images/OIG.jpeg';
+import image from './components/images/OIG-removebg-preview.png';
 
 function App() {
   const [gameState, setGameState] = useState("start");
   const [score, setScore] = useState(0);
   const [quizName, setQuizName] = useState([]);
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+    // alert("Theme changed to " + theme);
+    if (theme === "light") {
+      document.body.style = 'background: rgb(33, 37, 41);';
+    } else {
+      document.body.style = 'background: rgb(247, 247, 247);';
+    }
+  }
   return (
-    <div className="App">
-      <h1 className="heading container">
-        <img className='logo' src={image} alt='Q' />
-        <span>UIZZER</span>
-      </h1>
-      <QuizContext.Provider value={{ score, setScore, setGameState, quizName, setQuizName }}>
+    <div>
+      <div className="navbar mx-2">
+        <h1 className="heading">
+          <img className='logo' src={image} alt='Q' onClick={() => setGameState("start")} />
+          <span className={theme==="dark" && "text-light"}>UIZZER</span>
+        </h1>
+        <button className={"theme btn btn-" + (theme === "dark" ? "light" : "secondary")} onClick={toggleTheme}>
+          {theme === "light" ? <span>Dark</span> : <span>Light</span>}
+        </button>
+      </div>
+      <QuizContext.Provider value={{ score, setScore, setGameState, quizName, setQuizName, theme, toggleTheme }}>
         {gameState === "start" && <Start />}
         {gameState === "quiz" && <Quiz />}
         {gameState === "end" && <End />}

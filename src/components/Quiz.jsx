@@ -8,7 +8,7 @@ function Quiz() {
   const [question, setQuestion] = useState(0);
   //eslint-disable-next-line no-unused-vars
   const [choosenAnswer, setChoosenAnswer] = useState("");
-  const { quizName, setGameState, score, setScore } = useContext(QuizContext);
+  const { quizName, setGameState, score, setScore, theme } = useContext(QuizContext);
   const [flag, setFlag] = useState(false);
   const quizzes = { avengers, loki };
   const Questions = quizzes[quizName];
@@ -34,7 +34,7 @@ function Quiz() {
 
   return (
     <>
-      <div className="card quiz container mt-1">
+      <div className={"card quiz container mt-1 "+(theme==="dark"&&"bg-dark text-light")}>
         <div className="questionNo">{question+1} of {Questions.length}</div>
         <div className="card-body">
           <img className='ques-img' src={Questions[question].img} alt="Question image" />

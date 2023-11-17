@@ -4,18 +4,19 @@ import { QuizContext } from '../helper/Context';
 import {Category} from '../quiz'
 
 function Start() {
-  const { setGameState, setQuizName } = useContext(QuizContext);
+  const { setGameState, setQuizName, theme } = useContext(QuizContext);
   const handleClick = (quiz) => {
     setQuizName(quiz.quiz);
     document.title = quiz.title+" Quiz";
     setGameState("quiz");
   }
+
   return (
     <>
       <div className='start container'>
         {Category.map(cat => {
           return (
-            <div className="card mx-1 my-2">
+            <div className={"card mx-1 my-2 "+(theme==="dark"&&"bg-dark text-light")}>
               <img src={cat.poster} className="card-img-top poster" alt="quiz-poster" />
               <div className="card-body">
                 <h5 className="card-title">{cat.title}</h5>
