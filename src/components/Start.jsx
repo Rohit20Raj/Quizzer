@@ -13,15 +13,15 @@ function Start() {
 
   return (
     <>
-      <div className='start container'>
+      <div className='start'>
         {Category.map(cat => {
           return (
-            <div className={"card mx-1 my-2 "+(theme==="dark"&&"bg-dark text-light")}>
+            <div className={"start-card card mx-1 my-2 "+(theme==="dark"&&"bg-dark text-light")}>
               <img src={cat.poster} className="card-img-top poster" alt="quiz-poster" />
               <div className="card-body">
                 <h5 className="card-title">{cat.title}</h5>
                 {/* <p className="card-text">{cat.description}</p> */}
-                <button type="button" className="btn btn-primary" onClick={()=>handleClick(cat)}>Start Quiz</button>
+                <button type="button" className="btn btn-primary start-btn" onClick={()=>handleClick(cat)}>Start Quiz</button>
               </div>
             </div>
 

@@ -12,7 +12,7 @@ function Quiz() {
   const [flag, setFlag] = useState(false);
   const quizzes = { avengers, loki };
   const Questions = quizzes[quizName];
-  
+
   const handleAnswer = (answer) => {
     if (flag === false) {
       setChoosenAnswer(answer);
@@ -34,23 +34,27 @@ function Quiz() {
 
   return (
     <>
-      <div className={"card quiz container mt-1 "+(theme==="dark"&&"bg-dark text-light")}>
-        <div className="questionNo">{question+1} of {Questions.length}</div>
-        <div className="card-body">
-          <img className='ques-img' src={Questions[question].img} alt="Question image" />
-          <h5 className="card-title questions">
-            {Questions[question].prompt}
-          </h5>
-          <div className="options">
-            <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("A")}>{Questions[question].A}</button>
-            <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("B")}>{Questions[question].B}</button>
-            <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("C")}>{Questions[question].C}</button>
-            <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("D")}>{Questions[question].D}</button>
+      <div className={"card quiz mt-1 container " + (theme === "dark" && "bg-dark text-light")}>
+        <div className="questionNo">{question + 1} of {Questions.length}</div>
+        <div className="card-body flex">
+          <div className="image">
+            <img className='ques-img' src={Questions[question].img} alt="Question image" />
           </div>
-          {flag && (choosenAnswer === Questions[question].Ans ? <Correct /> : <Wrong ans={Questions[question][Questions[question].Ans]} />)}
-          <div className="bottom mt-3">
-            <div className='score'>Score: {score}</div>
-            <button type='button' className='btn btn-success' onClick={nextQuestion}> {question===Questions.length-1 ? "Finish Quiz" : "Next Question→"} </button>
+          <div className="question">
+            <h5 className="card-title questions">
+              {Questions[question].prompt}
+            </h5>
+            <div className="options">
+              <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("A")}>{Questions[question].A}</button>
+              <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("B")}>{Questions[question].B}</button>
+              <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("C")}>{Questions[question].C}</button>
+              <button type="button" className="btn btn-outline-primary mt-2" onClick={() => handleAnswer("D")}>{Questions[question].D}</button>
+            </div>
+            {flag && (choosenAnswer === Questions[question].Ans ? <Correct /> : <Wrong ans={Questions[question][Questions[question].Ans]} />)}
+            <div className="bottom mt-3">
+              <div className='score'>Score: {score}</div>
+              <button type='button' className='btn btn-success' onClick={nextQuestion}> {question === Questions.length - 1 ? "Finish Quiz" : "Next Question→"} </button>
+            </div>
           </div>
         </div>
       </div>
