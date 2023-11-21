@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { avengers, loki } from '../quizQuestions';
+import { avengers, loki, pokemon } from '../quizQuestions';
 import { QuizContext } from '../helper/Context';
 
 function End() {
@@ -9,7 +9,7 @@ function End() {
     document.title = "Quizzer";
     setGameState("start");
   }
-  const quizzes = { avengers, loki };
+  const quizzes = { avengers, loki, pokemon };
   const Questions = quizzes[quizName];
   return (
     <>

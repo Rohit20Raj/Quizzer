@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { avengers, loki } from '../quizQuestions'
+import { avengers, loki, pokemon } from '../quizQuestions'
 import { QuizContext } from '../helper/Context';
 import Correct from './Correct';
 import Wrong from './Wrong';
@@ -10,7 +10,7 @@ function Quiz() {
   const [choosenAnswer, setChoosenAnswer] = useState("");
   const { quizName, setGameState, score, setScore, theme } = useContext(QuizContext);
   const [flag, setFlag] = useState(false);
-  const quizzes = { avengers, loki };
+  const quizzes = { avengers, loki, pokemon };
   const Questions = quizzes[quizName];
 
   const handleAnswer = (answer) => {

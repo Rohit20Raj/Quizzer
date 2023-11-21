@@ -110,4 +110,32 @@ export const loki = [
     Ans: "D",
   }
 ];
-
+export const pokemon = [
+  {
+    prompt: "Ivysaur evolves into which Pokemon?",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDHb6rBzOgybvTgPIlQwhKfA1jlQEsXbXspQ",
+    A: "Venusaur",
+    B: "Bulbasaur",
+    C: "Dinasaur",
+    D: "Florosaur",
+    Ans: "A"
+  },
+  {
+    prompt: "Slugma is what type of Pokemon?",
+    img: "https://oyster.ignimgs.com/mediawiki/apis.ign.com/pokedex/7/79/Macy_Slugma.png",
+    A: "Grass",
+    B: "Water",
+    C: "Electric",
+    D: "Fire",
+    Ans: "D"
+  },
+  {
+    prompt: "Name the pokemon",
+    img: "https://www.proprofs.com/quiz-school/upload/yuiupload/1389163881.jpg",
+    A: "Totodile",
+    B: "Charmander",
+    C: "Bulbasaur",
+    D: "Torchic",
+    Ans: "C"
+  }
+]

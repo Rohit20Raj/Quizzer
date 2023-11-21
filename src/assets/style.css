@@ -1,5 +1,4 @@
 body{
-  background-color: rgba(245, 245, 245, 0.75);
   margin: 0;
   padding: 0;
 }
@@ -71,6 +70,12 @@ body{
   font-weight: bolder;
   color: green;
 }
+.end{
+  margin-top: 15vh;
+  height: 30vh;
+  background: linear-gradient(rgb(17, 129, 17), rgb(59, 197, 59));
+  color: white;
+}
 @media (orientation: landscape) {
   .card{
     width: 80vw;
@@ -79,7 +84,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     padding: 2vw;
   }
   .ques-img{
@@ -90,7 +95,9 @@ body{
     width: 30vw;
   }
   .end{
-    
+    margin-top: 5vh;
+    width: 18rem;
+    height: 40vh;
   }
 }
 .correct{
@@ -122,12 +129,7 @@ body{
   justify-content: space-between;
   align-items: stretch;
 }
-.end{
-  margin-top: 15vh;
-  height: 30vh;
-  background: linear-gradient(rgb(17, 129, 17), rgb(59, 197, 59));
-  color: white;
-}
+
 .result{
   font-size: 3rem;
 }
